@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-livestreammusic-dev-184753-authRole",
+      "UnauthRoleArn": "arn:aws:iam::117906616901:role/amplify-livestreammusic-dev-184753-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::117906616901:role/amplify-livestreammusic-dev-184753-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-livestreammusic-dev-184753-deployment",
+      "UnauthRoleName": "amplify-livestreammusic-dev-184753-unauthRole",
+      "StackName": "amplify-livestreammusic-dev-184753",
+      "StackId": "arn:aws:cloudformation:us-east-1:117906616901:stack/amplify-livestreammusic-dev-184753/fc835f00-6214-11ee-a0cc-12b8a5fcf885",
+      "AmplifyAppId": "d3hwrjsodbljpl"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3hwrjsodbljpl",
+          "type": "manual"
+        }
+      },
+      "api": {
+        "livestreammusic": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+/* sans-serif font is easier to read. */
+body {
+    font-family: sans-serif;
+}
