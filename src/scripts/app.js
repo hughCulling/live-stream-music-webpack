@@ -11,46 +11,6 @@ import { Amplify, API, graphqlOperation } from 'aws-amplify';
 import awsconfig from '../aws-exports';
 Amplify.configure(awsconfig);
 
-// Enable queries, mutations, and subscriptions
-
-// Mutations------------------------------------------------------------------------------------------------
-// import { API, graphqlOperation } from 'aws-amplify';
-import { createTodo, updateTodo, deleteTodo } from '../graphql/mutations';
-
-const todo = { name: "My first todo", description: "Hello world!" };
-
-/* create a todo */
-await API.graphql(graphqlOperation(createTodo, {input: todo}));
-
-/* update a todo */
-// await API.graphql(graphqlOperation(updateTodo, { input: { id: todoId, name: "Updated todo info" }}));
-
-/* delete a todo */
-// await API.graphql(graphqlOperation(deleteTodo, { input: { id: todoId }}));
-
-// Queries-----------------------------------------------------------------------------------------------------
-// import { API, graphqlOperation } from 'aws-amplify';
-import { listTodos } from '../graphql/queries';
-
-const todos = await API.graphql(graphqlOperation(listTodos));
-
-// Subscriptions------------------------------------------------------------------------------------------------
-// import { API, graphqlOperation } from 'aws-amplify';
-import { onCreateTodo } from '../graphql/subscriptions';
-
-// Subscribe to creation of Todo
-const sub = API.graphql(
-    graphqlOperation(onCreateTodo)
-).subscribe({
-    next: (payload) => {
-      const createdTodo = payload.value.data?.onCreateTodo;
-      console.log(createdTodo);
-    }
-});
-
-// Stop receiving data updates from the subscription
-sub.unsubscribe();
-
 //*********************************************************************************************************
 
 
